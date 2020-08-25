@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+{% block content %}
+    {% for offer in offers %}
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ offer.developer }}</a>
+                <small class="text-muted">{{ offer.release_date }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ offer.name }}</a></h2>
+            <p class="article-content">{{ offer.description }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
