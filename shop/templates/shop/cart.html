@@ -4,3 +4,9 @@
         <button class="btn btn-danger" type="submit">Delete</button>
     </form>
 {% endblock button %}
+{% block order %}
+    <div class="container">
+        <p class="h5 float-right">Total: {{ total }} zł</p>
+        <a class="btn btn-primary float-right" href="/cart/order/" role="button" style="clear: right;">Order</a>
+    </div>
+{% endblock order %}

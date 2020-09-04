@@ -7,6 +7,12 @@ def home(request):
 
 def cart(request):
     context = { 'offers': Offer.objects.filter(in_order = True) }
+
+    sum = 0
+    for offer in context['offers']:
+        sum += offer.price
+    context['total'] = sum
+
     return render(request, 'shop/cart.html', context)
 
 def add_to_cart(request, name):
