@@ -1,0 +1,6 @@
+{% extends "shop/list.html" %}
+{% block button %}
+    <form action="/cart/remove/{{ offer.name }}/" method="post">{% csrf_token %}
+        <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+{% endblock button %}

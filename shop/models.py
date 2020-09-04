@@ -2,7 +2,7 @@ from django.db import models
 
 class Offer(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    price = models.CharField(max_length=10, default="199,99zł")
     release_date = models.DateField()
     developer = models.CharField(max_length=100)
     in_order = models.BooleanField(default=False)

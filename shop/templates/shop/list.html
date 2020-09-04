@@ -9,7 +9,8 @@
             </div>
                 <img src="{{ offer.cover_image }}" class="rounded float-right" alt="Game cover" width="90" height="135">
                 <h2><a class="article-title" href="#">{{ offer.name }}</a></h2>
-                <p class="article-content">{{ offer.description }}</p>
+                <p class="article-content">{{ offer.price }}</p>
+                {% block button %}{% endblock %}
             </div>
         </article>
     {% endfor %}
