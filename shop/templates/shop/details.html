@@ -1,0 +1,20 @@
+{% extends "shop/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <small class="text-muted">{{ offer.developer }}</small>
+            <small class="text-muted">{{ offer.release_date }}</small>
+        </div>
+        <div class="article-header">
+            <div class="float-left"><img src="{{ offer.cover_image }}" class="rounded" alt="Game cover" width="180" height="270"></div>
+            <div class="float-right"><h1 class="article-title">{{ offer.name }}</h1>
+            <h3 class="article-title float-right">{{ offer.price }} zł</h3>
+            <form action="/cart/add/{{ offer.name }}/" method="post" class="float-right" style="clear: right;">{% csrf_token %}
+                <button class="btn btn-primary" type="submit">Add to Cart</button>
+            </form></div>
+        </div>
+            <p class="article-content float-left h6">{{ offer.description }}</p>
+        </div>
+    </article>
+{% endblock content %}

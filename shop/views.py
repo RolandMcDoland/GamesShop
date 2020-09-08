@@ -79,3 +79,7 @@ def payment(request):
 
 def thanks(request):
     return render(request, 'shop/thanks.html')
+
+def details(request, name):
+    context = { 'offer': Offer.objects.get(name = name) }
+    return render(request, 'shop/details.html', context)
