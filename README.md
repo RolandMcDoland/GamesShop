@@ -69,6 +69,11 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+In order to use PayU integration you need to create your store via PayU page. Than you need to create a file directly in the shop directory called **authorization.py**. It needs to contain a dictionary called **auth_dict** and have three fields:
+* **grant_type** = client_credentials
+* **client_id** - your client id from PayU
+* **client_secret** - your client secret from PayU
+
 ### Compilation
 
 To compile the project open the command prompt and navigate to the project's main directory. Than use the command:
